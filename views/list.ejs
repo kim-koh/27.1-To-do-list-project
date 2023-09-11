@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kim's Todo List</title>
+
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="box" id="heading">
+        <h1><%= listTitle %>!</h1>
+    </div>
+    
+    <div class="box">
+        <% for (let i=0; i < toDoList.length; i++) { %>
+            <div class="item">
+                <input type="checkbox">
+                <p><%= toDoList[i] %></p>
+            </div>
+        <% } %> 
+        
+        <form action="/" method="post">
+            <div>
+                <input type="text" name="newToDo" id="say" placeholder="to do" autocomplete="off"/>
+                <button type="submit" name="list" value=<%= listTitle %>>+</button>
+            </div>
+        </form>
+    </div>
+    
+
+    
+
+</body>
+</html>
